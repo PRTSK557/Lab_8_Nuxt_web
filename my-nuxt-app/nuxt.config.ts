@@ -1,5 +1,18 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true }
+  modules: ['@nuxthq/ui'],
+
+  ui: {
+    icons: 'heroicons'
+  },
+
+  app: {
+    head: {
+      titleTemplate: '%s - Продуктовий застосунок',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Сторінка зі списком продуктів з пошуком, сортуванням і пагінацією.' }
+      ]
+    }
+  }
 })
